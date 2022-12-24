@@ -10,6 +10,9 @@ module.exports = {
         charcoal: "#464646",
         "custom-grey": "#7f7e7e",
       },
+      boxShadow :{
+        '3xl': '-30px -20px 0px #464646'
+      }
     },
   },
   plugins: [],

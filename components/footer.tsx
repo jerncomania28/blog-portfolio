@@ -45,11 +45,11 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="w-full relative">
+        <footer className="w-full relative my-3">
 
 
             {/* link elements */}
-            <div className="flex text-[12px] text-custom-grey w-[80%] mx-auto justify-center items-center my-3">
+            <div className="flex text-[12px] text-custom-grey w-[80%] mx-auto justify-center items-center flex-wrap my-3">
                 {
                     FOOTER_LINKS.map((footerLink, _idx) => (
                         <FooterLinkStyle href={footerLink.href} key={_idx}>
