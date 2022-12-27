@@ -4,8 +4,7 @@
 
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200&display=swap");
 
 html,
 body {
@@ -29,6 +28,11 @@ a {
 @font-face {
   font-family: logo;
   src: url("../fonts/PermanentMarker-Regular.ttf");
+}
+
+@font-face {
+  font-family: alclonica;
+  src: url("../fonts/Aclonica-Regular.ttf");
 }
 
 @media (prefers-color-scheme: dark) {

@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         "albert-sans": ["Albert Sans", "sans-serif"],
+        alclonica: ["alclonica"],
       },
     },
   },

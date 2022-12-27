@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 //components
@@ -13,11 +14,13 @@ import ProfileImage from "../public/jeremiah.jpeg";
 // data
 
 import PORTFOLIO_DATA from "../project_data.json"
+import BLOG_DATA from "../blog_sample_data.json"
 
 // types 
 import { DataProps } from '../index.types'
 import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
+import BlogPostPreview from '../components/BlogPostPreview'
 
 const Home: NextPage = () => {
 
@@ -92,12 +95,12 @@ const Home: NextPage = () => {
 
         </div>
 
-        <div className='w-full relative flex flex-col justify-center my-4'>
-          <HeaderStyle className='mb-4'>
+        <div className='relative flex flex-col justify-center my-4'>
+          <HeaderStyle className='mb-4' headerClassName='text-[30px]'>
             Portfolio
           </HeaderStyle>
 
-          <div className='grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2 '>
+          <div className='grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3 '>
             {
               PORTFOLIO_DATA.slice(0, 6).map((data: DataProps, _idx) => (
                 <ProjectPreview key={_idx} data={data} textEnter={textImage} textLeave={textLeave} />
@@ -105,14 +108,37 @@ const Home: NextPage = () => {
             }
           </div>
 
-          
 
+          <Link href={"/portfolio"}>
+            <HeaderStyle className='w-[300px] md:w-[400px] my-6' headerClassName='text-[15px] whitespace-nowrap'>
+              view more
+            </HeaderStyle>
 
+          </Link>
         </div>
 
-        <HeaderStyle>
-          Blog
-        </HeaderStyle>
+
+        <div className='relative flex flex-col justify-center my-4'>
+
+          <HeaderStyle headerClassName='text-[30px]'>
+            Blog
+          </HeaderStyle>
+
+          <div className='grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-3 my-6'>
+            {
+              BLOG_DATA.map((data, _idx) => (
+                <BlogPostPreview key={_idx} data={data} />
+              ))
+            }
+          </div>
+
+          <Link href={"/blog"}>
+            <HeaderStyle className='w-[300px] md:w-[400px] my-6' headerClassName='text-[15px] whitespace-nowrap'>
+              view more
+            </HeaderStyle>
+          </Link>
+
+        </div>
 
 
       </main >

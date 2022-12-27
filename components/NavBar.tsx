@@ -43,7 +43,7 @@ const Navigation = () => {
     }
 
     return (
-        <nav className="w-full relative py-6 mb-3 ">
+        <nav className="w-full relative py-6 mb-3">
             <div className="w-[80%] mx-auto flex justify-between items-center before:content-[''] before:absolute before:bottom-0 before:left-[50%] before:h-[0.5px] before:bg-[#464646] before:w-full md:before:w-[80%] before:transform before:-translate-x-[50%]">
 
                 <motion.div onMouseEnter={textEnter} onMouseLeave={textLeave}>

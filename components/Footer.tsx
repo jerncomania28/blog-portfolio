@@ -17,7 +17,7 @@ const FooterLinkStyle = ({ children, href, textEnter, textLeave }: { children: R
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
+            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[2px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
             style={{ "fontFamily": "logo" }}
         >
             {children}

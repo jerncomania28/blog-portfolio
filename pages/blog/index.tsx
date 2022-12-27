@@ -1,13 +1,9 @@
 
 
-
-
 const Blog = () => {
     return (
         <div>
-
-            Blog Page
-
+            List of All Blogs
         </div>
     )
 }
