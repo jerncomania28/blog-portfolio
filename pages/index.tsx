@@ -4,12 +4,25 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 //components
-import HeaderStyle from '../components/headerStyle'
+import HeaderStyle from '../components/HeaderStyle'
+import ProjectPreview from '../components/ProjectPreview'
 
 //image 
 import ProfileImage from "../public/jeremiah.jpeg";
 
+// data
+
+import PORTFOLIO_DATA from "../project_data.json"
+
+// types 
+import { DataProps } from '../index.types'
+import React, { useContext } from 'react'
+import { AppContext } from '../context/AppContext'
+
 const Home: NextPage = () => {
+
+  const { textLeave, textEnter, textImage } = useContext(AppContext)
+
   return (
     <div className='w-full relative'>
       <Head>
@@ -18,30 +31,56 @@ const Home: NextPage = () => {
         <link rel="icon" href="/jeremiah.ico" />
       </Head>
 
-      <main className='w-[80%] mx-auto text-custom-grey text-center relative' style={{ "fontFamily": "logo" }}>
+      <main className='w-[90%] md:w-[80%] mx-auto text-custom-grey text-center relative font-family-albert-sans'>
         <div className='w-full relative flex flex-col my-6 justify-center items-center md:flex-row md:justify-between '>
           <motion.div
-            initial={{ y: 100, opacity: 0, scale: 0.5 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
             transition={
               {
                 duration: 0.5,
+                delay: 0.2,
                 default: { ease: "linear" }
               }
             }
-            className='w-full relative flex justify-center flex-col items-center my-6 text-left md:w-[45%] md:my-auto'>
-            <h1 className='text-[25px] font-bold self-start my-2'>Jeremiah Okon</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            className='w-full relative flex justify-center flex-col items-center my-6 text-left md:w-[45%] text-[20px] md:my-auto overflow-hidden'>
+            <motion.h1
+              className='text-[25px] font-bold self-start my-2'
+              style={{ "fontFamily": "logo" }}
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+            >
+              Jeremiah Okon
+            </motion.h1>
+            <motion.p
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+            >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Recusandae doloribus quam ea reiciendis voluptatibus natus autem molestias distinctio aperiam,
               odio sed maiores consectetur earum vel inventore dolore itaque! Dolorum, sit.
-            </p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </motion.p>
+            <motion.p
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+            >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Recusandae doloribus quam ea reiciendis voluptatibus natus autem molestias distinctio aperiam,
               odio sed maiores consectetur earum vel inventore dolore itaque! Dolorum, sit.
-            </p>
+            </motion.p>
           </motion.div>
 
-          <div className='w-full relative h-[300px] my-3 md:w-[45%] flex justify-center items-center '>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={
+              {
+                duration: 0.7,
+                delay: 0.2,
+                default: { ease: "linear" }
+              }
+            }
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            className='w-full relative h-[300px] my-3 md:w-[45%] flex justify-center items-center '>
             <Image
               src={ProfileImage}
               alt="profile"
@@ -49,22 +88,36 @@ const Home: NextPage = () => {
               height={300}
               className="shadow-3xl"
             />
-          </div>
+          </motion.div>
 
         </div>
 
-        <HeaderStyle>
-          Portfolio
-        </HeaderStyle>
+        <div className='w-full relative flex flex-col justify-center my-4'>
+          <HeaderStyle className='mb-4'>
+            Portfolio
+          </HeaderStyle>
+
+          <div className='grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2 '>
+            {
+              PORTFOLIO_DATA.slice(0, 6).map((data: DataProps, _idx) => (
+                <ProjectPreview key={_idx} data={data} textEnter={textImage} textLeave={textLeave} />
+              ))
+            }
+          </div>
+
+          
+
+
+        </div>
 
         <HeaderStyle>
           Blog
         </HeaderStyle>
 
 
-      </main>
+      </main >
 
-    </div>
+    </div >
   )
 }
 

@@ -1,4 +1,7 @@
 
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+import { motion } from "framer-motion";
 
 interface FooterLinkProps {
     name: string;
@@ -6,11 +9,19 @@ interface FooterLinkProps {
 }
 
 
-const FooterLinkStyle = ({ children, href }: { children: React.ReactNode, href: string }) => {
+const FooterLinkStyle = ({ children, href, textEnter, textLeave }: { children: React.ReactNode, href: string, textEnter: () => void, textLeave: () => void }) => {
     return (
-        <a href={href} target="_blank" rel="noreferrer" className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full" style={{ "fontFamily": "logo" }}>
+        <motion.a
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
+            style={{ "fontFamily": "logo" }}
+        >
             {children}
-        </a>
+        </motion.a>
     )
 
 }
@@ -19,6 +30,7 @@ const FooterLinkStyle = ({ children, href }: { children: React.ReactNode, href: 
 
 const Footer = () => {
 
+    const { textEnter, textLeave } = useContext(AppContext)
 
     const FOOTER_LINKS: FooterLinkProps[] = [
         {
@@ -47,12 +59,16 @@ const Footer = () => {
     return (
         <footer className="w-full relative my-3">
 
-
             {/* link elements */}
             <div className="flex text-[12px] text-custom-grey w-[80%] mx-auto justify-center items-center flex-wrap my-3">
                 {
                     FOOTER_LINKS.map((footerLink, _idx) => (
-                        <FooterLinkStyle href={footerLink.href} key={_idx}>
+                        <FooterLinkStyle
+                            href={footerLink.href}
+                            key={_idx}
+                            textEnter={textEnter}
+                            textLeave={textLeave}
+                        >
                             {footerLink.name}
                         </FooterLinkStyle>
                     ))

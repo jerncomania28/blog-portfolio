@@ -4,10 +4,10 @@
 const Portfolio = () => {
     return (
         <div>
-            Portfolio Page
+
+            Portfolio HomePage
         </div>
     )
-
 }
 
 

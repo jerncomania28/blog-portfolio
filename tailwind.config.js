@@ -8,11 +8,14 @@ module.exports = {
     extend: {
       colors: {
         charcoal: "#464646",
-        "custom-grey": "#7f7e7e",
+        "custom-grey": "#F3F3F3",
       },
-      boxShadow :{
-        '3xl': '-30px -20px 0px #464646'
-      }
+      boxShadow: {
+        "3xl": "-30px -20px 0px #464646",
+      },
+      fontFamily: {
+        "albert-sans": ["Albert Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
