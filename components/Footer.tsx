@@ -17,8 +17,7 @@ const FooterLinkStyle = ({ children, href, textEnter, textLeave }: { children: R
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[2px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
-            style={{ "fontFamily": "logo" }}
+            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all font-alclonica before:duration-300 before:ease-in-out before:content-[''] before:h-[2px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
         >
             {children}
         </motion.a>
@@ -76,7 +75,7 @@ const Footer = () => {
 
             </div>
 
-            <p style={{ "fontFamily": 'logo' }} className="text-custom-grey text-[12px] w-[80%] mx-auto text-center ">
+            <p className="text-custom-grey text-[12px] w-[80%] mx-auto text-center ">
                 Jerncomania &copy; 2022 . All Rights Reserved Jeremiah Okon
             </p>
 

@@ -8,6 +8,7 @@ export interface DataProps {
     sourceUrl: string;
     projectDescription: string;
     imagePath: string;
+    href: string;
 }
 
 export interface MouseAnimationProps {

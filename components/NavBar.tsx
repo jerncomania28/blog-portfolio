@@ -21,7 +21,7 @@ const MobileLinkStyle: React.FC<MobileLinkStyleProps> = ({ children, index, hand
             transition={{ duration: 1, delay: (index * 0.2) }}
             exit={{ y: -50, opacity: 0 }}
             onClick={handleSetIsOpen}
-            className={`relative text-[30px] inline-block text-custom-grey capitalize my-4 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full`}>
+            className={`relative text-[30px] inline-block text-custom-grey capitalize font-alclonica my-4 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full`}>
             <Link href={`/${children === "home" ? "" : children}`}>{children}</Link>
         </motion.div>
     )
@@ -43,13 +43,12 @@ const Navigation = () => {
     }
 
     return (
-        <nav className="w-full relative py-6 mb-3">
+        <nav className="w-full relative py-6 mb-3 font-alclonica">
             <div className="w-[80%] mx-auto flex justify-between items-center before:content-[''] before:absolute before:bottom-0 before:left-[50%] before:h-[0.5px] before:bg-[#464646] before:w-full md:before:w-[80%] before:transform before:-translate-x-[50%]">
 
                 <motion.div onMouseEnter={textEnter} onMouseLeave={textLeave}>
                     <Link
                         href={"/"}
-                        style={{ fontFamily: "logo" }}
                         className="text-[30px] text-custom-grey"
                     >JO</Link>
                 </motion.div>

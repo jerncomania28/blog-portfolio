@@ -1,12 +1,23 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+import { useContext } from "react";
+
+import { AppContext } from "../context/AppContext";
 
 const HeaderStyle = ({ children, className, headerClassName }: { children: React.ReactNode, className?: string, headerClassName?: string }) => {
+
+    const { textEnter, textLeave } = useContext(AppContext)
+
     return (
-        <div className={`w-full flex justify-center items-center relative ${className}`}>
-            <h1 style={{ "fontFamily": "logo" }} className={`capitalize font-bold mr-2 ${headerClassName}`}>{children}</h1>
+        <motion.div
+            onMouseEnter={textEnter}
+            onMouseLeave={textLeave}
+            className={`w-full flex justify-center items-center relative ${className}`}
+        >
+            <h1 className={`capitalize font-bold mr-2 font-alclonica ${headerClassName}`}>{children}</h1>
             <span className="w-full h-[1px] bg-charcoal rounded"></span>
-        </div>
+        </motion.div>
     )
 }
 

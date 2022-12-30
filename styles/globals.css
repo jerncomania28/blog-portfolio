@@ -24,11 +24,23 @@ a {
   box-sizing: border-box;
   cursor: none;
 }
-
-@font-face {
-  font-family: logo;
-  src: url("../fonts/PermanentMarker-Regular.ttf");
+/* Style the thumb (the part that you drag to scroll) */
+::-webkit-scrollbar-thumb {
+  background: #464646;
+  border-radius: 10px;
 }
+
+/* Style the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Style the scrollbar itself */
+::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+}
+
 
 @font-face {
   font-family: alclonica;

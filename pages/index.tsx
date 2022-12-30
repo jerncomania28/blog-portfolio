@@ -48,8 +48,7 @@ const Home: NextPage = () => {
             }
             className='w-full relative flex justify-center flex-col items-center my-6 text-left md:w-[45%] text-[20px] md:my-auto overflow-hidden'>
             <motion.h1
-              className='text-[25px] font-bold self-start my-2'
-              style={{ "fontFamily": "logo" }}
+              className='text-[25px] font-bold self-start my-2 font-alclonica'
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
             >
@@ -121,7 +120,7 @@ const Home: NextPage = () => {
         <div className='relative flex flex-col justify-center my-4'>
 
           <HeaderStyle headerClassName='text-[30px]'>
-            Blog
+            Articles
           </HeaderStyle>
 
           <div className='grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-3 my-6'>
