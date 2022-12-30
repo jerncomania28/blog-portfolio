@@ -54,19 +54,21 @@ const Home: NextPage = () => {
             >
               Jeremiah Okon
             </motion.h1>
+            {/* <motion.p
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+            >
+              
+            </motion.p> */}
             <motion.p
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-            >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Recusandae doloribus quam ea reiciendis voluptatibus natus autem molestias distinctio aperiam,
-              odio sed maiores consectetur earum vel inventore dolore itaque! Dolorum, sit.
-            </motion.p>
-            <motion.p
-              onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
-            >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Recusandae doloribus quam ea reiciendis voluptatibus natus autem molestias distinctio aperiam,
-              odio sed maiores consectetur earum vel inventore dolore itaque! Dolorum, sit.
+            >
+              Hi there! I am a Frontend Developer with over 3 years of experience.
+              Throughout my career, I have had the opportunity to work with a variety of technologies, including ReactJS, NextJs, Node, tailwindcss, JavaScript, TypeScript, HTML, and CSS.
+              I am passionate about building beautiful and intuitive user interfaces that enhance the user experience.
+              I am always looking for ways to improve my skills and stay up to date with the latest trends in frontend development.
+              I am excited to continue learning and growing as a developer, and I am always open to new opportunities.
             </motion.p>
           </motion.div>
 
