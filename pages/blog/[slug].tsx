@@ -26,7 +26,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
       <Head>
         <title>{frontmatter.title} | My blog</title>
       </Head>
-      <div >
+      <div className="mt-3 ">
         <h1
           className="text-[24px] font-albert-sants font-bold font-alclonica tracking-wide my-2 text-custom-grey"
         >{frontmatter.title}</h1>
