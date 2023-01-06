@@ -30,7 +30,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
         <h1
           className="text-[24px] font-albert-sants font-bold font-alclonica tracking-wide my-2 text-custom-grey"
         >{frontmatter.title}</h1>
-        <p className="my-2 text-custom-grey text-[18px] font-albert-sans border-bottom border-[1px] border-solid border-[#ddd]">
+        <p className="my-2 text-custom-grey text-[16px] font-albert-sans mb-4">
           {dayjs(frontmatter.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
           {frontmatter.readingTime}
         </p>
