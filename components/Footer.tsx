@@ -56,7 +56,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="w-full relative my-3">
+        <footer className="w-full relative my-3 ">
 
             {/* link elements */}
             <div className="flex text-[12px] text-custom-grey w-[80%] mx-auto justify-center items-center flex-wrap my-3">
@@ -75,7 +75,7 @@ const Footer = () => {
 
             </div>
 
-            <p className="text-custom-grey text-[12px] w-[80%] mx-auto text-center ">
+            <p className="text-custom-grey text-[12px] w-[80%] mx-auto text-center font-alclonica">
                 Jerncomania &copy; 2022 . All Rights Reserved Jeremiah Okon
             </p>
 

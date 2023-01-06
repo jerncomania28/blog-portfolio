@@ -6,7 +6,7 @@
         "sourceUrl": "https://github.com/jerncomania28/quiz-app",
         "projectDescription": "Quiz Application is a web-app that allows users to sign up as either a student or a teacher , based on the roles you sign-up as there are actions that can be performed Based on these profiles.",
         "imagePath": "/quiz-app-home.png",
-        "href": "/portfolio/quiz-app"
+        "href": "quiz-app"
     },
     {
         "name": "Bohemian E-commerce",
@@ -15,7 +15,7 @@
         "sourceUrl": "https://github.com/jerncomania28/bohemian",
         "projectDescription": "An attempt to clone the bohemiantraders.com",
         "imagePath": "/bohemian-home.png",
-        "href": "/portfolio/bohemian"
+        "href": "bohemian"
     },
     {
         "name": "E-commerce Product's Page ",
@@ -24,7 +24,7 @@
         "sourceUrl": "https://github.com/jerncomania28/ecommerce-products-page",
         "projectDescription": "Product's Page section of an E-commerce Application .",
         "imagePath": "/product-page-home.png",
-        "href": "/portfolio/product-page"
+        "href": "product-page"
     },
     {
         "name": "Rock , Paper , Scissors Game",
@@ -33,7 +33,7 @@
         "sourceUrl": "https://github.com/jerncomania28/rock-paper-scissors-game-",
         "projectDescription": "Rock , Paper , Scissors game as commonly referred is one that evaluates which is greater than the other based on some common shapes , the Rules for the game and the playing Processes are indicated in the web application.",
         "imagePath": "/rock-paper-scissors-home.png",
-        "href": "/portfolio/game"
+        "href": "game"
     },
     {
         "name": "Meta Bnb",
@@ -42,7 +42,7 @@
         "sourceUrl": "https://github.com/jerncomania28/meta-bnb",
         "projectDescription": "Responsive Landing Page Website for a Web3 firm .",
         "imagePath": "/meta-bnb-home.png",
-        "href": "/portfolio/meta-bnb"
+        "href": "meta-bnb"
     },
     {
         "name": "Tip Calculator",
@@ -51,7 +51,7 @@
         "sourceUrl": "https://github.com/jerncomania28/tip-calculator",
         "projectDescription": "Tip Calculator Provides easy calculation of tips from customers in a restraurant , bars etc .the tip is calculated based on percentage of the cost of purcchase by a customer , say the cost of purchase was $300 and the percentage tipped by the customer was 10% of the said amount depending on the number of persons the tip is meant for,in the case of a single person he/she gets $30 in the case of two persons they get $15 each , etc. It also calculates a cummulative of all the tips made.",
         "imagePath": "/tip-calculator-home.png",
-        "href": "/portfolio/tip-calculator"
+        "href": "tip-calculator"
     },
     {
         "name": "Expense Chart",
@@ -60,7 +60,7 @@
         "sourceUrl": "https://github.com/jerncomania28/expense-chart",
         "projectDescription": "Expense Chart is a Simple FrontEnd SPA Displaying a Graphical Interface for Weekly Consumption Cost . It Indicates the amount spent on Each Day on Hover as well as Highlight the cost for that day in Blue based on the current Day .",
         "imagePath": "/expense-chart-home.png",
-        "href": "/portfolio/expense-chart"
+        "href": "expense-chart"
     },
     {
         "name": "Advice Generator",
@@ -69,7 +69,7 @@
         "sourceUrl": "https://github.com/jerncomania28/advice-generator",
         "projectDescription": "Advice generator randomly generates an advice from our REST API and display on the frontend of our application.",
         "imagePath": "/advice-generator-home.png",
-        "href": "/portfolio/advice-generator"
+        "href": "advice-generator"
     },
     {
         "name": "SunnySide Landing Page",
@@ -78,6 +78,6 @@
         "sourceUrl": "https://github.com/jerncomania28/Sunny-Page",
         "projectDescription": "Sunny Side Landing Page",
         "imagePath": "/sunnyside-home.png",
-        "href": "/portfolio/sunnyside"
+        "href": "sunnyside"
     }
 ]
