@@ -10,9 +10,8 @@ const ProjectInformation = () => {
   const { pid } = router.query;
   console.log("portolio ID :", pid);
   return (
-    <div>
+    <div className="w-[90%] mx-auto flex flex-col justify-center  md:w-[80%] md:flex-row">
 
-      Dynamic Project Information Disaplay
 
     </div>
   )

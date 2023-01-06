@@ -21,7 +21,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
   console.log('source', source);
 
   return (
-    <div className="w-[90%] md:w-[60%] mx-auto ">
+    <div className="w-[90%] md:w-[60%] relative mx-auto ">
 
       <Head>
         <title>{frontmatter.title} | My blog</title>

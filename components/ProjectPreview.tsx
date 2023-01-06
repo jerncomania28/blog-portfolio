@@ -34,6 +34,7 @@ const ProjectPreview = ({ data, textEnter, textLeave }: { data: DataProps, textE
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
             className="group relative h-[200px] transition-all duration-500 ease-in-out hover:after:content-[''] hover:after:w-full hover:after:h-full hover:after:bg-black hover:after:opacity-80 hover:after:absolute hover:after:top-0 hover:after:left-0" style={{ "fontFamily": "logo" }}>
+                
             <Image src={data.imagePath} alt="horse" fill />
 
             <div className="font-alclonica absolute top-0 left-0 w-full h-full text-[12px] hidden z-10 text-white group-hover:flex justify-center items-center flex-col ">
