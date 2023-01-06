@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -22,7 +22,10 @@ import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import BlogPostPreview from '../components/BlogPostPreview'
 
-const Home: NextPage = () => {
+// utils
+import { getAllArticles } from '../utils/mdx'
+
+const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   const { textLeave, textEnter, textImage } = useContext(AppContext)
 
@@ -127,7 +130,7 @@ const Home: NextPage = () => {
 
           <div className='grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-3 my-6'>
             {
-              BLOG_DATA.map((data, _idx) => (
+              posts.map((data: any, _idx: number) => (
                 <BlogPostPreview key={_idx} data={data} />
               ))
             }
@@ -149,3 +152,23 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
+
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await getAllArticles()
+
+  articles
+    .sort((a, b) => {
+      if (a.publishedAt > b.publishedAt) return 1
+      if (a.publishedAt < b.publishedAt) return -1
+      return 0
+    })
+
+  return {
+    props: {
+      posts: articles.reverse()
+    }
+  }
+
+}
