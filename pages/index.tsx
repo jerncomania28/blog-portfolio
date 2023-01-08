@@ -57,12 +57,6 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
             >
               Jeremiah Okon
             </motion.h1>
-            {/* <motion.p
-              onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
-            >
-              
-            </motion.p> */}
             <motion.p
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}

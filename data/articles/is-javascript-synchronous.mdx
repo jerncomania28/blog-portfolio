@@ -1,0 +1,32 @@
+---
+title: "Is JavaScript a Synchronous or Asynchronous Language?"
+publishedAt: "2022-10-23"
+excerpt: "As obvious as the answer might seem to some, explaining why it is synchronous might be difficult. To others, it might be confusing, as it is evident that you can perform both synchronous and asynchronous calls with JavaScript."
+---
+
+
+As obvious as the answer might seem to some, 
+explaining why it is synchronous might be difficult. To others, it might be confusing, 
+as it is evident that you can perform both synchronous and asynchronous calls with JavaScript.
+
+Here is a simple explanation that might come in handy when trying to explain the difference.
+
+Pondering on this, I figure the answer to this question lies in the question below.
+
+What is the Difference Between a Javascript Engine and a Javascript Runtime Environment?
+
+A Javascript engine is simply a program or software that interprets and executes Javascript code.
+There are different engines for different browsers.
+Chrome uses the v8 engine , Firefox uses SpiderMonkey, etc.
+
+A Javascript runtime environment executes Javascript code as well as other tasks such as call stacks, heaps, and event loops.
+
+As some may be aware, the browser acts as a runtime environment for JavaScript,
+allowing it to perform asynchronous tasks.
+Functions such as setTimeOut, alert, and prompt are not native to Javascript;
+they are contained in the browser window object, and because the Javascript engine cannot interpret these functions , they are related to the browser API ( window object).
+
+I should mention that Node is also a Javascript runtime environment because it uses Node bindings to libuv to call functions that are not executable by the Javascript Engine outside the browser.
+
+So, to return to the original question, is JavaScript a synchronous language? Javascript is, indeed, a synchronous language.
+So, how are asynchronous operations carried out? It makes use of the Runtime Environment Libraries to perform asynchronous operations.
