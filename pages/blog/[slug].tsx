@@ -15,23 +15,33 @@ import CustomImage from "../../components/custom-components /CustomImage";
 import CustomParagraph from "../../components/custom-components /CustomParagraph";
 import CustomLink from "../../components/custom-components /CustomLink";
 
+import { CustomImageProps } from "../../components/custom-components /CustomImage";
+import { CustomParagraphProps } from "../../components/custom-components /CustomParagraph";
+import { CustomLinkProps } from "../../components/custom-components /CustomLink";
+
 interface BlogPostProps {
   source: MDXRemoteSerializeResult
   frontmatter: any
 }
 
+interface MDXComponents {
+  p: React.FC<CustomParagraphProps>
+  img: React.FC<CustomImageProps>;
+  a: React.FC<CustomLinkProps>;
+}
+
+
+const myCustomComponents: MDXComponents = {
+  p: CustomParagraph,
+  img: CustomImage,
+  a: CustomLink
+}
+
 
 const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) => {
 
-  const components = {
-    CustomImage,
-    CustomParagraph,
-    CustomLink
-  }
-
   return (
-    <div className="w-[90%] md:w-[60%] relative mx-auto ">
-
+    <div className="w-[90%] md:w-[60%] my-4 relative mx-auto ">
       <Head>
         <title>{frontmatter.title} | My blog</title>
       </Head>
@@ -44,7 +54,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
           {frontmatter.readingTime}
         </p>
         <div className="my-2 text-custom-grey text-[20px] font-albert-sans">
-          <MDXRemote {...source} components={components} />
+          <MDXRemote {...source} components={myCustomComponents as any} />
         </div>
       </div>
     </div>
@@ -68,22 +78,7 @@ export const getStaticProps = async ({ params }: { params: { slug: string } }) =
   const { slug } = params
   const { content, frontmatter } = await getArticleFromSlug(slug)
 
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [
-        rehypeSlug,
-        [
-          rehypeAutolinkHeadings,
-          {
-            properties: { className: ['anchor'] },
-          },
-          { behaviour: 'wrap' },
-        ],
-        rehypeHighlight,
-        rehypeCodeTitles,
-      ],
-    },
-  })
+  const mdxSource = await serialize(content)
 
   return {
     props: {

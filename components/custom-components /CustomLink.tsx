@@ -1,6 +1,12 @@
 
 
-const CustomLink = ({ children, href, ...props }: { children: React.ReactNode, href: string, props: any }) => {
+export interface CustomLinkProps {
+  children: React.ReactNode
+  href: string
+  props: any
+}
+
+const CustomLink: React.FC<CustomLinkProps> = ({ children, href, ...props }) => {
 
   return (
     <a
