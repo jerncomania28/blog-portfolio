@@ -11,14 +11,23 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 // utils
 import { getSlug, getArticleFromSlug } from "../../utils/mdx";
 
+import CustomImage from "../../components/custom-components /CustomImage";
+import CustomParagraph from "../../components/custom-components /CustomParagraph";
+import CustomLink from "../../components/custom-components /CustomLink";
 
 interface BlogPostProps {
   source: MDXRemoteSerializeResult
   frontmatter: any
 }
+
+
 const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) => {
 
-  console.log('source', source);
+  const components = {
+    CustomImage,
+    CustomParagraph,
+    CustomLink
+  }
 
   return (
     <div className="w-[90%] md:w-[60%] relative mx-auto ">
@@ -35,7 +44,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
           {frontmatter.readingTime}
         </p>
         <div className="my-2 text-custom-grey text-[20px] font-albert-sans">
-          <MDXRemote {...source} />
+          <MDXRemote {...source} components={components} />
         </div>
       </div>
     </div>
