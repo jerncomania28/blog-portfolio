@@ -1,0 +1,53 @@
+---
+title: "How Does Node Handle Asynchronous Tasks?"
+publishedAt: "2022-10-23"
+excerpt: "As obvious as the answer might seem to some, explaining why it is synchronous might be difficult. To others, it might be confusing, as it is evident that you can perform both synchronous and asynchronous calls with JavaScript."
+---
+
+It is critical for developers to understand the internal workings of the languages,
+or in this case, runtimes, that we use for development processes.
+
+Some are familiar with the fact that we use NodeJS for backend development as opposed to other solid programming languages such as Python, Go, Ruby, etc.
+NodeJs runs on Javascript.
+
+Javascript is a single-threaded language that is synchronous but can perform asynchronous operations through its runtime environment.
+
+Node, like the browser, is a runtime environment that allows us to write JavaScript outside of the browser.
+When you run JavaScript outside of your browser, you are most likely running Node.
+
+There are several engines that aid in the translation of Javascript into Machine Language, the most popular of which is the V8 Engine, on which NodeJS was built.
+
+The diagram below depicts the process that every JavaScript code must go through for your hardware to understand the instructions it is given.
+
+![reference image 1](/images/how-does-node-handle-asynchronous-tasks/reference-1.jpeg)
+
+This applies to any place where Javascript code exists, including the browser, Node, and other runtimes such as Dino.
+
+The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node.
+As we all know, running Javascript outside of the browser removes all inbuilt _window _ object methods that account for Javascript's asynchronicity.The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node. As we all know, running Javascript outside of the browser removes all inbuilt _window _ object methods that account for Javascript's asynchronicity.The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node. As we all know, running Javascript outside of the browser removes all inbuilt _window _ object methods that account for Javascript's asynchronicity.The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node. As we all know, running Javascript outside of the browser removes all inbuilt _window _ object methods that account for Javascript's asynchronicity.The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node. As we all know, running Javascript outside of the browser removes all inbuilt _window _ object methods that account for Javascript's asynchronicity.The purpose of this article is to inform us how JavaScript performs asynchronous tasks in Node. As we all know,
+running Javascript outside of the browser removes all inbuilt `window` object methods that account for Javascript's asynchronicity.
+
+![reference image 1](/images/how-does-node-handle-asynchronous-tasks/reference-2.png)
+
+Some of our Javascript code may now require additional features that are not present in Javascript, such as network requests (HTTP/HTTPS), file systems, and so on.
+The engine uses the Runtime APIs (Node APIs), and even though some of these features are written in Javascript, they must call their equivalent functions in a low-level language like C++, specifically via NODE BINDINGS.
+
+Node bindings are what allow your Javascript code to call functions written in C and C++.
+
+C and C++ codes are tested and well-optimized codes for encrypting your data or accessing your file system regardless of your operating system.
+Actual implementations of these can be found in the libuv library.
+
+The two most important components in Node.js are libuv and the v8 Engine.
+When an input task is delegated by Node, libuv accepts it and returns an output response.
+
+Node, like a request and response tree, makes a Javascript request to obtain a webpage.
+
+Because Javascript cannot make network requests natively,
+it uses the HTTP module provided by the Node APIs to call the equivalent functions for making network requests in low-level languages such as C and C++, using Node Bindings to perform this action.
+
+The code execution is then triggered in the Libuv library after Node has delegated that task to parts of the operating system.
+
+It moves on to perform other tasks without waiting for the request to be completed.
+This whole process above is referred to as asynchronous I/O.
+
+`Nodejs excels at dealing with tasks asynchronously.`

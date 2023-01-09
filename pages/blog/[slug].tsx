@@ -41,7 +41,7 @@ const myCustomComponents: MDXComponents = {
 const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) => {
 
   return (
-    <div className="w-[90%] md:w-[60%] my-4 relative mx-auto ">
+    <div className="w-[90%] md:w-[60%] my-4 relative mx-auto my-auto">
       <Head>
         <title>{frontmatter.title} | My blog</title>
       </Head>
