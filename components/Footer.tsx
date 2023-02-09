@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
@@ -8,8 +8,7 @@ interface FooterLinkProps {
     href: string;
 }
 
-
-const FooterLinkStyle = ({ children, href, textEnter, textLeave }: { children: React.ReactNode, href: string, textEnter: () => void, textLeave: () => void }) => {
+const FooterLinkStyle = ({ icon, href, textEnter, textLeave }: { icon?: string, href: string, textEnter: () => void, textLeave: () => void }) => {
     return (
         <motion.a
             onMouseEnter={textEnter}
@@ -17,15 +16,13 @@ const FooterLinkStyle = ({ children, href, textEnter, textLeave }: { children: R
             href={href}
             target="_blank"
             rel="noreferrer"
-            className="relative inline-block text-custom-grey capitalize mx-2 before:transition-all font-alclonica before:duration-300 before:ease-in-out before:content-[''] before:h-[2px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full"
+            className="mx-2"
         >
-            {children}
+            <Image src={icon as string} alt="social-icon" width={40} height={40} />
         </motion.a>
     )
 
 }
-
-
 
 const Footer = () => {
 
@@ -33,49 +30,48 @@ const Footer = () => {
 
     const FOOTER_LINKS: FooterLinkProps[] = [
         {
-            name: "twitter",
+            name: '/assets/twitter.svg',
             href: "https://twitter.com/OkonJeremiah4?t=yvWDA9aQpwif2t7sj70uqg&s=09"
         },
         {
-            name: "instagram",
+            name: '/assets/instagram.svg',
             href: "https://www.instagram.com/okonjeremiah__/"
 
         },
         {
-            name: "github",
+            name: '/assets/github.svg',
             href: "https://github.com/jerncomania28"
         },
         {
-            name: "linkedIn",
+            name: '/assets/linkedin.svg',
             href: "https://www.linkedin.com/in/okon-jeremiah"
         },
         {
-            name: "Dev.to",
+            name: '/assets/dev.svg',
             href: "https://dev.to/jerncomania"
         }
     ]
 
     return (
-        <footer className="w-full relative my-3 ">
+        <footer className="w-full relative my-4 ">
 
             {/* link elements */}
             <div className="flex text-[12px] text-custom-grey w-[80%] mx-auto justify-center items-center flex-wrap my-3">
                 {
                     FOOTER_LINKS.map((footerLink, _idx) => (
                         <FooterLinkStyle
+                            icon={footerLink.name}
                             href={footerLink.href}
                             key={_idx}
                             textEnter={textEnter}
                             textLeave={textLeave}
-                        >
-                            {footerLink.name}
-                        </FooterLinkStyle>
+                        />
                     ))
                 }
 
             </div>
 
-            <p className="text-custom-grey text-[12px] w-[80%] mx-auto text-center font-alclonica">
+            <p className="text-custom-grey text-[8px] w-[80%] mx-auto text-center font-alclonica">
                 Jerncomania &copy; 2022 . All Rights Reserved Jeremiah Okon
             </p>
 

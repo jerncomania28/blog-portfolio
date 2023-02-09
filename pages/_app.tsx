@@ -5,6 +5,7 @@ import AppProvider from '../context/AppContext'
 
 import Layout from '../components/Layout'
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     // using layout component for consistent looks across all pages.

@@ -46,6 +46,10 @@ a {
   font-family: alclonica;
   src: url("../fonts/Aclonica-Regular.ttf");
 }
+@font-face {
+  font-family: proxima;
+  src: url("../fonts/ProximaNovaFont.otf");
+}
 
 @media (prefers-color-scheme: dark) {
   html {

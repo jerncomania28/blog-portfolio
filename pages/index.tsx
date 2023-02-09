@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -14,7 +15,6 @@ import ProfileImage from "../public/jeremiah.jpeg";
 // data
 
 import PORTFOLIO_DATA from "../project_data.json"
-import BLOG_DATA from "../blog_sample_data.json"
 
 // types 
 import { DataProps } from '../index.types'
@@ -60,13 +60,23 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
             <motion.p
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
+              className="text-[18px] font-proxima"
             >
-              Hi there! I am a Frontend Developer with over 3 years of experience.
-              Throughout my career, I have had the opportunity to work with a variety of technologies, including ReactJS, NextJs, Node, tailwindcss, JavaScript, TypeScript, HTML, and CSS.
-              I am passionate about building beautiful and intuitive user interfaces that enhance the user experience.
-              I am always looking for ways to improve my skills and stay up to date with the latest trends in frontend development.
-              I am excited to continue learning and growing as a developer, and I am always open to new opportunities.
+              <p className='my-2'>Websites are like first impressions, and a bad one can mean lost customers.</p>
+
+              <p className='my-2'>
+                That's where I come in, I make websites that are easy on the eyes and fun to use.
+                Think of me as the superhero of website design. With my powers of HTML, CSS, JavaScript, React, Firebase, TailwindCSS, and TypeScript, I'll make sure your customers stick around. And the best part? I bring the laughs too, because let's face it, a little humor goes a long way.
+              </p>
+
+              <p className='my-2'> So, if you want a website that's both good-looking and easy to use, I'm your guy.</p>
             </motion.p>
+            <button
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+              className='py-2 px-8 text-black bg-custom-grey self-start my-3'>
+              Hire Me
+            </button>
           </motion.div>
 
           <motion.div
