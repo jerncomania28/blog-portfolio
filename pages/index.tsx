@@ -117,7 +117,7 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
           </div>
 
 
-          <Link href={"/portfolio"}>
+          <Link href={"/portfolio"} passHref>
             <HeaderStyle className='w-[300px] md:w-[400px] my-6' headerClassName='text-[15px] whitespace-nowrap'>
               view more
             </HeaderStyle>
@@ -140,7 +140,7 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
             }
           </div>
 
-          <Link href={"/blog"}>
+          <Link href={"/blog"} passHref>
             <HeaderStyle className='w-[300px] md:w-[400px] my-6' headerClassName='text-[15px] whitespace-nowrap'>
               view more
             </HeaderStyle>
