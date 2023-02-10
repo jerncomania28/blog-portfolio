@@ -10,7 +10,7 @@ export interface CustomImageProps {
 const CustomImage: React.FC<CustomImageProps> = ({ src, alt, ...props }) => {
 
   return (
-    <img src={src} alt={alt} {...props} className="my-3 w-full" />
+    <Image src={src} alt={alt} {...props} className="my-3 w-full" />
   )
 
 }

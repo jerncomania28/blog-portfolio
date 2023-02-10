@@ -16,7 +16,7 @@ const LinkStyle = ({ children, href, textEnter, textLeave }: LinkStyleProps) => 
             onMouseEnter={textEnter}
             onMouseLeave={textLeave}
             className={`relative inline-block text-custom-grey capitalize mx-6 font-alclonica before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[2px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full`}>
-            <Link href={href} >{children} </Link>
+            <Link href={href} passHref>{children} </Link>
         </motion.div>
     )
 }

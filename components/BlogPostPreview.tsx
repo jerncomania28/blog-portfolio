@@ -23,6 +23,7 @@ const BlogPostPreview = ({ data }: { data: any }) => {
         <Link
             href={`/blog/${data.slug}`}
             className="relative border-b-[1px] border-solid border-charcoal text-left py-3 my-2"
+            passHref
         >
             <motion.h1
                 onMouseEnter={textEnter}

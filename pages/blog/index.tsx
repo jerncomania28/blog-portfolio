@@ -1,7 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import BlogPostPreview from "../../components/BlogPostPreview";
 import HeaderStyle from "../../components/HeaderStyle";
-import BLOG_DATA from "../../blog_sample_data.json"
 
 import { getAllArticles } from "../../utils/mdx";
 

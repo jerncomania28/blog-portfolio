@@ -57,7 +57,7 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
             >
               Jeremiah Okon
             </motion.h1>
-            <motion.p
+            <motion.div
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
               className="text-[18px] font-proxima"
@@ -70,7 +70,8 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
               </p>
 
               <p className='my-2'> So, if you want a website that's both good-looking and easy to use, I'm your guy.</p>
-            </motion.p>
+
+            </motion.div>
             <button
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}

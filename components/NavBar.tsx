@@ -22,7 +22,7 @@ const MobileLinkStyle: React.FC<MobileLinkStyleProps> = ({ children, index, hand
             exit={{ y: -50, opacity: 0 }}
             onClick={handleSetIsOpen}
             className={`relative text-[30px] inline-block text-custom-grey capitalize font-alclonica my-4 before:transition-all before:duration-300 before:ease-in-out before:content-[''] before:h-[1px] before:absolute before:-bottom-1 before:left-0 before:w-[40%] before:bg-charcoal hover:before:w-full`}>
-            <Link href={`/${children === "home" ? "" : children}`}>{children}</Link>
+            <Link href={`/${children === "home" ? "" : children}`} passHref>{children}</Link>
         </motion.div>
     )
 
@@ -50,6 +50,7 @@ const Navigation = () => {
                     <Link
                         href={"/"}
                         className="text-[30px] text-custom-grey"
+                        passHref
                     >JO</Link>
                 </motion.div>
 

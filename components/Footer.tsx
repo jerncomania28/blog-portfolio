@@ -18,7 +18,7 @@ const FooterLinkStyle = ({ icon, href, textEnter, textLeave }: { icon?: string, 
             rel="noreferrer"
             className="mx-2"
         >
-            <Image src={icon as string} alt="social-icon" width={40} height={40} />
+            <Image src={icon as string} alt="social-icon" width={30} height={30} />
         </motion.a>
     )
 
