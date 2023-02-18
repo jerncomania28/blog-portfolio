@@ -22,7 +22,6 @@ a {
 
 * {
   box-sizing: border-box;
-  cursor: none;
 }
 /* Style the thumb (the part that you drag to scroll) */
 ::-webkit-scrollbar-thumb {

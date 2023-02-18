@@ -29,6 +29,11 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
 
   const { textLeave, textEnter, textImage } = useContext(AppContext)
 
+  const sendEmail = () => {
+    console.log('clicked');
+    window.open('mailto:okonjeremiahprogs@gmail.com', '_self');
+  }
+
   return (
     <div className='w-full relative'>
       <Head>
@@ -72,12 +77,16 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
               <p className='my-2'> So, if you want a website that's both good-looking and easy to use, I'm your guy.</p>
 
             </motion.div>
-            <button
+            <motion.a
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-              className='py-2 px-8 text-black bg-custom-grey self-start my-3'>
+              href="mailto:okonjeremiahprogs@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className='py-2 px-8 text-black bg-custom-grey self-start my-3'
+            >
               Hire Me
-            </button>
+            </motion.a>
           </motion.div>
 
           <motion.div
