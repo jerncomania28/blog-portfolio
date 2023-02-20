@@ -29,11 +29,6 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
 
   const { textLeave, textEnter, textImage } = useContext(AppContext)
 
-  const sendEmail = () => {
-    console.log('clicked');
-    window.open('mailto:okonjeremiahprogs@gmail.com', '_self');
-  }
-
   return (
     <div className='w-full relative'>
       <Head>
@@ -80,7 +75,7 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
             <motion.a
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-              href="mailto:okonjeremiahprogs@gmail.com"
+              href="mailto:okonjeremiahprogs@gmail.com?subject=Website Enquiry& body=Hi, I found your website and would like to inquire more about your services"
               target="_blank"
               rel="noreferrer"
               className='py-2 px-8 text-black bg-custom-grey self-start my-3'

@@ -35,7 +35,7 @@ const Navigation = () => {
 
     const { textLeave, textEnter } = useContext(AppContext);
 
-    const NAV_ROUTES: string[] = ["home", "portfolio", "contact", "blog"]
+    const NAV_ROUTES: string[] = ["home", "portfolio", "about", "blog"]
 
     // controlling display of nav on Mobile and Desktop
     const handleSetIsOpen = () => {
