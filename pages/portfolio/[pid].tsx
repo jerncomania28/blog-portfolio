@@ -26,7 +26,7 @@ const ProjectInformation = () => {
   return (
     <div className="w-[90%] mx-auto md:w-[80%]">
       <div className="my-8">
-        <Link href={`/blog`} className="px-4 py-2 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black  self-start" passHref>
+        <Link href={`/portfolio`} className="px-4 py-2 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black  self-start" passHref>
           &larr;Back
         </Link>
       </div>
