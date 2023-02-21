@@ -1,13 +1,10 @@
 import Head from "next/head";
+import Link from "next/link";
 import { GetStaticPaths } from "next";
 
 import dayjs from 'dayjs'
-import rehypeSlug from 'rehype-slug'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import rehypeHighlight from 'rehype-highlight'
-import rehypeCodeTitles from 'rehype-code-titles'
 import { serialize } from 'next-mdx-remote/serialize'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 // utils
 import { getSlug, getArticleFromSlug } from "../../utils/mdx";
 
@@ -46,6 +43,9 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
         <title>{frontmatter.title} | My blog</title>
       </Head>
       <div className="mt-3 ">
+        <Link href={`/blog`} className="px-4 py-2 my-6 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black" passHref>
+          &larr;Back
+        </Link>
         <h1
           className="text-[24px] font-albert-sants font-bold font-alclonica tracking-wide my-2 text-custom-grey"
         >{frontmatter.title}</h1>

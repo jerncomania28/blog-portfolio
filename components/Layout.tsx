@@ -50,14 +50,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             y: mousePosition.y - 37.5,
             height: 75,
             width: 75,
-            mixBlendMode: "difference"
+            mixBlendMode: "difference",
+            backgroundColor: "white"
         },
         image: {
             x: mousePosition.x - 10,
             y: mousePosition.y - 10,
-            height: 20,
-            width: 20,
-            backgroundColor: "yellow"
+            mixBlendMode: "difference",
         }
     }
     return (

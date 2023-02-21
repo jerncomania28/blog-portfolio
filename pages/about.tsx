@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AppContext } from "../context/AppContext";
 import HeaderStyle from "../components/HeaderStyle";
 import ExperienceView from "../components/ExperienceView";
+import ProgressBar from "../components/ProgressBar";
 
 import EXPERIENCE_DATA from "../experience_data.json";
 
@@ -98,8 +99,15 @@ const About = () => {
                     Technologies
                 </HeaderStyle>
 
-                <div>
-
+                <div className="flex flex-col justify-center my-6">
+                    <ProgressBar technology="HTML" percentage={95} />
+                    <ProgressBar technology="CSS" percentage={90}/>
+                    <ProgressBar technology="Sass" percentage={85}/>
+                    <ProgressBar technology="tailwindcss" percentage={80}/>
+                    <ProgressBar technology="Javascript" percentage={95} />
+                    <ProgressBar technology="React" percentage={95}/>
+                    <ProgressBar technology="NextJS" percentage={85}/>
+                    <ProgressBar technology="Firebase" percentage={85}/>
                 </div>
             </div>
 
