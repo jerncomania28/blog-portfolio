@@ -72,6 +72,17 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
               <p className='my-2'> So, if you want a website that's both good-looking and easy to use, I'm your guy.</p>
 
             </motion.div>
+
+            <motion.div className="my-3 self-start "
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}>
+              <a
+                href="https://docs.google.com/document/d/1TCRG_JKH-A1t4xcwBC3lwQZniQKpbARihAHHAU_Abr4/edit?usp=sharing"
+                download
+                className="font-alclonica"
+              >Resume</a>
+            </motion.div>
+
             <motion.a
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}

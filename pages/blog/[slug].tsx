@@ -43,7 +43,7 @@ const BlogPost = ({ post: { source, frontmatter } }: { post: BlogPostProps }) =>
         <title>{frontmatter.title} | My blog</title>
       </Head>
       <div className="mt-3 ">
-        <Link href={`/blog`} className="px-4 py-2 my-6 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black" passHref>
+        <Link href={`/blog`} className="px-4 py-2 my-8 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black" passHref>
           &larr;Back
         </Link>
         <h1

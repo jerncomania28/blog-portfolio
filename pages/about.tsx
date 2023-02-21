@@ -101,14 +101,22 @@ const About = () => {
 
                 <div className="flex flex-col justify-center my-6">
                     <ProgressBar technology="HTML" percentage={95} />
-                    <ProgressBar technology="CSS" percentage={90}/>
-                    <ProgressBar technology="Sass" percentage={85}/>
-                    <ProgressBar technology="tailwindcss" percentage={80}/>
+                    <ProgressBar technology="CSS" percentage={90} />
+                    <ProgressBar technology="Sass" percentage={85} />
+                    <ProgressBar technology="tailwindcss" percentage={80} />
                     <ProgressBar technology="Javascript" percentage={95} />
-                    <ProgressBar technology="React" percentage={95}/>
-                    <ProgressBar technology="NextJS" percentage={85}/>
-                    <ProgressBar technology="Firebase" percentage={85}/>
+                    <ProgressBar technology="React" percentage={95} />
+                    <ProgressBar technology="NextJS" percentage={85} />
+                    <ProgressBar technology="Firebase" percentage={85} />
                 </div>
+            </div>
+
+            <div className="my-3 text-left">
+                <a
+                    href="https://docs.google.com/document/d/1TCRG_JKH-A1t4xcwBC3lwQZniQKpbARihAHHAU_Abr4/edit?usp=sharing"
+                    download
+                    className="font-alclonica"
+                >&darr;&darr;Download Resume</a>
             </div>
 
         </div>
