@@ -19,7 +19,7 @@ const ProgressBar: React.FC<ProgressData> = ({ technology, percentage }) => {
         <p>{percentage}%</p>
       </div>
       <div className="h-[20px] w-full rounded-full bg-white relative">
-        <div className="h-full bg-red-500 rounded-full" style={style}></div>
+        <div className="h-full bg-charcoal rounded-full" style={style}></div>
       </div>
     </div>
   )

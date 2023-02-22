@@ -77,7 +77,7 @@ const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}>
               <a
-                href="https://docs.google.com/document/d/1TCRG_JKH-A1t4xcwBC3lwQZniQKpbARihAHHAU_Abr4/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1jjUxAHtMmD8GDA9MToyobvPbQqdTMvbX40wKyIIaNn0/edit?usp=sharing"
                 download
                 className="font-alclonica"
               >Resume</a>

@@ -113,10 +113,10 @@ const About = () => {
 
             <div className="my-3 text-left">
                 <a
-                    href="https://docs.google.com/document/d/1TCRG_JKH-A1t4xcwBC3lwQZniQKpbARihAHHAU_Abr4/edit?usp=sharing"
+                    href="https://docs.google.com/document/d/1jjUxAHtMmD8GDA9MToyobvPbQqdTMvbX40wKyIIaNn0/edit?usp=sharing"
                     download
-                    className="font-alclonica"
-                >&darr;&darr;Download Resume</a>
+                    className="font-proxima px-4 py-4 my-4 mx-4 border-[1px] border-solid border-custom-grey transition duration-500 ease-in-out hover:border-none hover:bg-custom-grey hover:text-black"
+                >Download Resume</a>
             </div>
 
         </div>
